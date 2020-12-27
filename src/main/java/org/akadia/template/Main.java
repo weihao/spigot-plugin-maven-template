@@ -12,7 +12,9 @@ public class Main extends JavaPlugin implements Listener {
     public void onEnable() {
         getLogger().info("Template plugin is loaded.");
         Bukkit.getPluginManager().registerEvents(this, this);
-        super.onEnable();
+
+        getCommand("example").setExecutor(new ExampleCommand());
+
     }
 
     @Override
